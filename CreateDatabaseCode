@@ -1,0 +1,26 @@
+CREATE DATABASE techbuy;
+
+USE techbuy;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    description VARCHAR(255),
+    image VARCHAR(100) NOT NULL
+);
+
+INSERT INTO products (name, price, description, image) VALUES
+('MacBook Air M3', 1299, '8-Core CPU, 10-Core GPU, 24GB Unified Memory, 512GB SSD Storage','images/macbook.jpg'),
+('iPhone 16', 1099, 'A18 chip with 5-core GPU, Camera Control Easier way to capture Faster access to photo and video tools, Super Retina XDR display','images/iphone.jpg'),
+('AirPods 4', 179, 'Active Noise Cancellation, Adaptive Audio, and Transparency mode, Personalized Spatial Audio with dynamic head tracking, Up to 30 hours of listening time (up to 20 hours with Active Noise Cancellation enabled), using the case', 'images/airpods.jpg'),
+('Apple Watch Series 10', 699, '46mm or 42mm aluminum or titanium case, Up to 18 hours, Up to 36 hours in Low Power Mode, Fast charging, Wide-angle Always-On Retina display Up to 2000 nits, Up to 40% brighter when viewed at an angle', 'images/appleWatch.jpg'),
+('Apple Vision Pro', 3699, 'Apple Vision Pro seamlessly blends digital content with your physical space.
+So you can work, watch, relive memories, and connect in ways never before possible.
+', 'images/appleVisionPro.jpg');
